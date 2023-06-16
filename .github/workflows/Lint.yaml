@@ -5,7 +5,7 @@ on:
 
 jobs:
   Lint:
-    runs-on: ubuntu-latest
+    - runs-on: ubuntu-latest
 
     - steps:
       - name: Checkout
@@ -14,5 +14,5 @@ jobs:
       - name: Lint
         uses: nosborn/github-action-markdown-cli@v3.3.0
         with:
-          files: *.md
+          files: src/*.md
           ignore_files: README.md

@@ -5,6 +5,10 @@ on:
     branches:
       - main
 
+env:
+  S3_BUCKET_URL: s3://emil-soleymani-portfolio-markdown/
+  S3_BUCKET_REGION: us-east-1
+
 jobs:
  Upload:
   runs-on: [ubuntu-latest]
@@ -13,13 +17,28 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v3
 
-    - name: Upload to S3
-      uses: keithweaver/aws-s3-github-action@v1.0.0
+    - uses: keithweaver/aws-s3-github-action@v1.0.0
+      name: Upload to S3
       with:
-        command: cp
+        command: sync
         source: ./src/
-        destination: s3://emil-soleymani-portfolio-markdown/
+        destination: ${{ env.S3_BUCKET_URL }}
         aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
         aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        aws_region: us-east-1
-        flags: --recursive
+        aws_region: ${{ env.S3_BUCKET_REGION }}
+        # Sync all files from src folder to the bucket, deleting old ones
+        # Note: --recursive flag is not needed for aws s3 sync command
+        flags: --delete --cache-control max-age=31536000   # Set cache-control header to have some max-age value
+    
+    - uses: keithweaver/aws-s3-github-action@v1.0.0
+      name: Remove caching of files
+      with:
+        command: cp
+        # Same source and destination
+        source: ${{ env.S3_BUCKET_URL }}
+        destination: ${{ env.S3_BUCKET_URL }}
+        aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws_region: ${{ env.S3_BUCKET_REGION }}
+        # Copy all files back into the same bucket, but replacing max-age
+        flags: --recursive --cache-control max-age:no-cache

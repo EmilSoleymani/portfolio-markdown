@@ -31,4 +31,6 @@ const helloWorld = () => {
 }
 </Code>
 
-Hello
+Hello!
+
+Also this is not cached.

@@ -31,7 +31,7 @@ const helloWorld = () => {
 }
 </Code>
 
-<Code language="json">
+<Code language="java">
 name: Publish
 
 on: 

@@ -35,8 +35,8 @@ const helloWorld = () => {
 name: Publish
 
 on:
-    push:
-        branches: main
+  push:
+    branches: main
 </Code>
 
 Hello!

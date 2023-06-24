@@ -33,6 +33,10 @@ const helloWorld = () => {
 
 <Code language="java">
 name: Publish
+
+on:
+    push:
+        branches: main
 </Code>
 
 Hello!

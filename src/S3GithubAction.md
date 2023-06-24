@@ -20,13 +20,12 @@ Next, we setup triggers for our GitHub Actions, and optionally environment varia
 <Code language='yaml'>
 on:
   push:
-    branches:
-      - main
+    branches: main
     paths: ['package.json', 'public/**', 'src/**', '.github/workflows/Publish.yaml']
 
 env:
-  S3_BUCKET_URL: s3://<your-bucket-name>/
-  S3_BUCKET_REGION: <region-name>
+  S3_BUCKET_URL: s3://\<your-bucket-name>/
+  S3_BUCKET_REGION: \<region-name>
 </Code>
 
 This will ensure that this action runs on pushes to `main` branch (Note: You should always set branch protection rules to protect main branch from having pushes, as I do for my repo, meaning this **ONLY** runs on merged pull requests). Furthermore, we wouldn't want to upload to S3 on every change - e.g. test cases or changes to docs or `README` - which is what the `paths` parameter can help specify.
@@ -61,31 +60,31 @@ The job can be built using `npm` by following these steps:
 Putting these together produces:
 
 <Code language='yaml'>
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
+steps:
+  - name: Checkout
+    uses: actions/checkout@v3
 
-      - name: Setup Node
-        uses: actions/setup-node@v3
-        with:
-          node-version: <your-node-version>
-    
-      - name: Install dependencies
-        run: npm install
+  - name: Setup Node
+    uses: actions/setup-node@v3
+    with:
+      node-version: \<your-node-version>
 
-      - name: Build
-        run: npm run build
+  - name: Install dependencies
+    run: npm install
+
+  - name: Build
+    run: npm run build
 </Code>
 
 This will produce a static version of your project in the `build/` directory. However, this is considered an artifact of the job, and will not be passed onto the `upload` step! We will have to use `actions/upload-artifact@v2` and `actions/download-artifact@v2` to acheive this. Add the following step to the `build` job:
 
 <Code language='yaml'>
-    - name: Temporarily save build path
-      uses: actions/upload-artifact@v2
-      with:
-        name: <artifact-name>
-        path: ./build
-        retention-days: 3
+- name: Temporarily save build path
+  uses: actions/upload-artifact@v2
+  with:
+    name: \<artifact-name>
+    path: ./build
+    retention-days: 3
 </Code>
 
 ### Upload Job

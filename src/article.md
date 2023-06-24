@@ -31,12 +31,13 @@ const helloWorld = () => {
 }
 </Code>
 
-<Code language="yaml">
+<Code language="json">
 name: Publish
 
-on: push:
-    branches: main
-    paths: ['package.json', 'public/**', 'src/**', '.github/workflows/Publish.yaml']
+on: 
+    push:
+        branches: main
+        paths: ['package.json', 'public/**', 'src/**', '.github/workflows/Publish.yaml']
 </Code>
 
 Hello!

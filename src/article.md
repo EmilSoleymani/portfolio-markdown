@@ -37,7 +37,7 @@ name: Publish
 on: 
     push:
         branches: main
-        paths: ['package.json', 'public/**', 'src/**', '.github/workflows/Publish.yaml']
+        paths: \['package.json', 'public/**', 'src/**', '.github/workflows/Publish.yaml'\]
 </Code>
 
 Hello!

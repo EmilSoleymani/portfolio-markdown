@@ -36,7 +36,8 @@ name: Publish
 
 on:
   push:
-    branches: main
+    branches: 
+        main
 </Code>
 
 Hello!

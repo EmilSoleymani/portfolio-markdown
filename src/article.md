@@ -31,6 +31,14 @@ const helloWorld = () => {
 }
 </Code>
 
+<Code language="yaml">
+name: Publish
+
+on: push:
+    branches: main
+    paths: ['package.json', 'public/**', 'src/**', '.github/workflows/Publish.yaml']
+</Code>
+
 Hello!
 
 Also this is not cached.

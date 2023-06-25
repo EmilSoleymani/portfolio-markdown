@@ -31,15 +31,6 @@ const helloWorld = () => {
 }
 </Code>
 
-<Code language="java">
-name: Publish
-
-on:
-  push:
-    branches: 
-        main
-</Code>
-
 Hello!
 
 Also this is not cached.

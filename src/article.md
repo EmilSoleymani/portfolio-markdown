@@ -8,7 +8,7 @@ In line `code`
 
 Hello World, auto deployed from GitHub Actions!
 
-> A block quote with ~strikethrough~ and a URL: https://reactjs.org.
+> A block quote with <Line>strikethrough</Line> and a [URL](https://reactjs.org).
 
 * Lists
 * [ ] todo

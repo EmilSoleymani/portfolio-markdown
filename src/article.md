@@ -1,6 +1,6 @@
 # Hello World
 
-This is a proof-of-concept, work in progress version of my portfolio. It is generated almost completely from Markdown files contained in an S3 bucket. This makes maintenance and adding to the blog very easy in the long term. It is also auto-deployed via GitHub Actions!
+This is a *proof-of-concept*, work in progress version of my portfolio. It is generated almost completely from **Markdown** files contained in an S3 bucket. This makes maintenance and adding to the blog very easy in the long term. It is also auto-deployed via GitHub Actions!
 
 * Markdown
 

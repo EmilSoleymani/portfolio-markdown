@@ -31,7 +31,7 @@ const helloWorld = () => {
 }
 </Code>
 
-<Image src='https://emil-soleymani-portfolio-markdown.s3.amazonaws.com/assets/images/awscert.png' alt='bruh' style='opacity: 0.1;'/>
+<Image src='https://emil-soleymani-portfolio-markdown.s3.amazonaws.com/assets/images/awscert.png' alt='bruh' style='opacity: 0.1; width: 80%; margin-left: auto;'/>
 
 Hello!
 

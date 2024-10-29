@@ -33,6 +33,4 @@ const helloWorld = () => {
 
 <Image src='https://emil-soleymani-portfolio-markdown.s3.amazonaws.com/assets/images/awscert.png' alt='bruh' style='opacity: 0.7; display: block; margin-left: auto; margin-right: auto; width: 50%;'/>
 
-Hello!
-
 Also this is not cached.

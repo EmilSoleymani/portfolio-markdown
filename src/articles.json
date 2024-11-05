@@ -4,19 +4,22 @@
             "id": 0,
             "title": "Test",
             "date": "2023-06-13",
-            "url": "https://emil-soleymani-portfolio-markdown.s3.amazonaws.com/article.md"
+            "url": "https://emil-soleymani-portfolio-markdown.s3.amazonaws.com/article.md",
+            "summary": "Months ago when coming up with the idea to start this blog alongside my portfolio website, I came up with the idea that I wanted my blog posts to be written entirely in Markdown, which will be converted to JSX automatically and displayed in my React.\n\nThe motivation for wanting this Markdown to JSX conversion was rooted mostly in curiosity and a chance to experiment rather than providing added convenience and practicality in the blog writing process. Although it might save me some time per blog, it was quite tedious to get this plugin and site setup in the way I wanted. This demotivated me at first, resulting in me stepping away from this project for some time, but with this guide I aim to alleviate the pain in getting this plugin setup and working for your needs..."
         },
         {
             "id": 1,
             "title": "Automating S3 Bucket Upload with Github Actions",
             "date": "2023-06-14",
-            "url": "https://emil-soleymani-portfolio-markdown.s3.amazonaws.com/S3GithubAction.md"
+            "url": "https://emil-soleymani-portfolio-markdown.s3.amazonaws.com/S3GithubAction.md",
+            "summary": "Months ago when coming up with the idea to start this blog alongside my portfolio website, I came up with the idea that I wanted my blog posts to be written entirely in Markdown, which will be converted to JSX automatically and displayed in my React.\n\nThe motivation for wanting this Markdown to JSX conversion was rooted mostly in curiosity and a chance to experiment rather than providing added convenience and practicality in the blog writing process. Although it might save me some time per blog, it was quite tedious to get this plugin and site setup in the way I wanted. This demotivated me at first, resulting in me stepping away from this project for some time, but with this guide I aim to alleviate the pain in getting this plugin setup and working for your needs..."
         },
         {
             "id": 1,
             "title": "Markdown to JSX for React Blogs",
             "date": "2024-10-29",
-            "url": "https://emil-soleymani-portfolio-markdown.s3.amazonaws.com/MarkdownToJSX.md"
+            "url": "https://emil-soleymani-portfolio-markdown.s3.amazonaws.com/MarkdownToJSX.md",
+            "summary": "Months ago when coming up with the idea to start this blog alongside my portfolio website, I came up with the idea that I wanted my blog posts to be written entirely in Markdown, which will be converted to JSX automatically and displayed in my React.\n\nThe motivation for wanting this Markdown to JSX conversion was rooted mostly in curiosity and a chance to experiment rather than providing added convenience and practicality in the blog writing process. Although it might save me some time per blog, it was quite tedious to get this plugin and site setup in the way I wanted. This demotivated me at first, resulting in me stepping away from this project for some time, but with this guide I aim to alleviate the pain in getting this plugin setup and working for your needs..."
         }
     ]
 }
